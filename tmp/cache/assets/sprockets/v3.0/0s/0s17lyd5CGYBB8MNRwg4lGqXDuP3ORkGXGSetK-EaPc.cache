@@ -1,0 +1,26 @@
+I"A(function() {
+  $(document).ready(function() {
+    $('div#reload_form form').submit(function(event) {
+      var counts, url;
+      event.preventDefault();
+      url = this.action;
+      return counts = $('#counts_to_reload')[0].value;
+    });
+    return $.ajax({
+      type: 'put',
+      url: url,
+      data: {
+        counts_to_reload: counts
+      },
+      dataType: 'json',
+      success: function(json) {
+        $('#counts').text(json.counts);
+        if (json.counts >= 30) {
+          return $('#reload_form').fadeOut();
+        }
+      }
+    });
+  });
+
+}).call(this);
+:ET

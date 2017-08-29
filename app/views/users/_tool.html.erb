@@ -1,0 +1,8 @@
+<%= div_for Tool do %>
+  <h2><%= Tool.name %></h2>
+  <p>
+    Condition: <%= Tool.condition %>
+    counts: <%= Tool.counts %>
+    Purchased <%= time_ago_in_words Tool.purchased_on %> ago
+  </p>
+<% end %>

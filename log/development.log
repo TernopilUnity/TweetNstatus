@@ -1,0 +1,1008 @@
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from env_config at /home/filbert/.rvm/gems/ruby-2.4.0/gems/railties-5.1.3/lib/rails/application.rb:247)
+Started GET "/" for ::1 at 2017-08-29 20:32:51 +0300
+  
+ActionController::RoutingError (Couldn't find WeaponsHelper, expected it to be defined in helpers/weapons_helper.rb):
+  
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/users_controller.rb:1:in `<top (required)>'
+Started GET "/" for ::1 at 2017-08-29 20:35:25 +0300
+  
+ActionController::RoutingError (undefined method `respond_to' for UsersController:Class):
+  
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<top (required)>'
+Started GET "/" for ::1 at 2017-08-29 20:35:26 +0300
+  
+ActionController::RoutingError (undefined method `respond_to' for UsersController:Class):
+  
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<top (required)>'
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from env_config at /home/filbert/.rvm/gems/ruby-2.4.0/gems/railties-5.1.3/lib/rails/application.rb:247)
+Started GET "/" for ::1 at 2017-08-29 20:36:38 +0300
+  
+ActionController::RoutingError (undefined method `respond_to' for UsersController:Class):
+  
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<top (required)>'
+Started POST "/__web_console/repl_sessions/6bf01af1dd92ca6435e77a17f4358b7c/trace" for ::1 at 2017-08-29 20:36:56 +0300
+Started GET "/" for ::1 at 2017-08-29 20:39:21 +0300
+  
+ActionController::RoutingError (undefined method `respond_to' for UsersController:Class):
+  
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<top (required)>'
+Started GET "/" for ::1 at 2017-08-29 20:39:22 +0300
+  
+ActionController::RoutingError (undefined method `respond_to' for UsersController:Class):
+  
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<top (required)>'
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from env_config at /home/filbert/.rvm/gems/ruby-2.4.0/gems/railties-5.1.3/lib/rails/application.rb:247)
+Started GET "/" for ::1 at 2017-08-29 20:41:30 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (12.1ms)
+Completed 500 Internal Server Error in 219ms
+
+
+  
+ActionView::Template::Error (Unknown database 'TweetnStore_development'):
+    1: <h1>users</h1>
+    2: <ul>
+    3:   <% @users.each do |user| %>
+    4:     <li><%= link_to user.name, user %></li>
+    5:   <% end %>
+    6: </ul>
+  
+app/views/users/index.html.erb:3:in `_app_views_users_index_html_erb__2999450870796188864_33366140'
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY) ENGINE=InnoDB[0m
+  [1m[35m (8.3ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK(4562783858042496870, 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateTweets (20111004042612)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK(4562783858042496870)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK(4562783858042496870, 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateTweets (20111004042612)
+  [1m[35m (16.2ms)[0m  [1m[35mCREATE TABLE `tweets` (`id` int NOT NULL AUTO_INCREMENT PRIMARY KEY, `message` varchar(255), `User_id` int, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20111004042612')[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddPrivacyToTweets (20111004043056)
+  [1m[35m (26.0ms)[0m  [1m[35mALTER TABLE `tweets` ADD `private` tinyint(1)[0m
+  [1m[35m (7.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20111004043056')[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddLocationToTweets (20111004043112)
+  [1m[35m (12.9ms)[0m  [1m[35mALTER TABLE `tweets` ADD `location` varchar(30)[0m
+  [1m[35m (12.2ms)[0m  [1m[35mALTER TABLE `tweets` ADD `show_location` tinyint(1) DEFAULT 0[0m
+  [1m[35m (13.8ms)[0m  [1m[35mALTER TABLE `tweets` ADD `category_name` varchar(255)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20111004043112')[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to RemoveCategoryNameFromTweets (20111004131442)
+  [1m[35m (15.2ms)[0m  [1m[35mALTER TABLE `tweets` DROP `category_name`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20111004131442')[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddTweetCategories (20111004131926)
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE `categories` (`id` int NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255)) ENGINE=InnoDB[0m
+  [1m[35m (10.6ms)[0m  [1m[35mCREATE TABLE `categorizations` (`id` int NOT NULL AUTO_INCREMENT PRIMARY KEY, `tweet_id` int, `category_id` int) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20111004131926')[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateLocations (20111004132300)
+  [1m[35m (10.9ms)[0m  [1m[35mCREATE TABLE `locations` (`id` int NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `tweeter_id` int, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20111004132300')[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTools (20111004132830)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK(4562783858042496870)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK(4562783858042496870, 0)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateTools (20111004132830)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK(4562783858042496870)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK(4562783858042496870, 0)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateTools (20111004132830)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK(4562783858042496870)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK(4562783858042496870, 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateTools (20111004132830)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK(4562783858042496870)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK(4562783858042496870, 0)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateTools (20111004132830)
+  [1m[35m (10.9ms)[0m  [1m[35mCREATE TABLE `tools` (`id` int NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `counts` int, `is_broken` tinyint(1), `purchased_on` date, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20111004132830')[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateUsers (20111004144904)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK(4562783858042496870)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT GET_LOCK(4562783858042496870, 0)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateUsers (20111004144904)
+  [1m[35m (13.4ms)[0m  [1m[35mCREATE TABLE `users` (`id` int NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20111004144904')[0m
+  [1m[35m (12.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateToolsUserJoinTable (20111004163823)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK(4562783858042496870)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK(4562783858042496870, 0)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateToolsUserJoinTable (20111004163823)
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE TABLE `tools_users` (`Tool_id` int, `User_id` int) ENGINE=InnoDB[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20111004163823')[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to ChangeLocationsTweeterIdToTweetId (20121107160830)
+  [1m[35m (12.1ms)[0m  [1m[35mALTER TABLE `locations` DROP `tweeter_id`[0m
+  [1m[35m (10.3ms)[0m  [1m[35mALTER TABLE `locations` ADD `tweet_id` int[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20121107160830')[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to RemoveLocationFromTweets (20121107161306)
+  [1m[35m (12.3ms)[0m  [1m[35mALTER TABLE `tweets` DROP `location`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20121107161306')[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddLocationIdToTweets (20121107162802)
+  [1m[35m (12.7ms)[0m  [1m[35mALTER TABLE `tweets` ADD `location_id` int[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE  INDEX `index_tweets_on_location_id`  ON `tweets` (`location_id`) [0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20121107162802')[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2017-08-29 17:56:02', '2017-08-29 17:56:02')[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT RELEASE_LOCK(4562783858042496870)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from env_config at /home/filbert/.rvm/gems/ruby-2.4.0/gems/railties-5.1.3/lib/rails/application.rb:247)
+Started GET "/" for ::1 at 2017-08-29 20:56:13 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (1.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered users/index.html.erb within layouts/application (148.1ms)
+Completed 500 Internal Server Error in 373ms (ActiveRecord: 3.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_User_path' for #<#<Class:0x0000000419a1a0>:0x00000004191848>):
+    4:     <li><%= link_to user.name, user %></li>
+    5:   <% end %>
+    6: </ul>
+    7: <%= link_to "New User", new_User_path %>
+  
+app/views/users/index.html.erb:7:in `_app_views_users_index_html_erb___4042735013830786667_34396600'
+Started GET "/" for ::1 at 2017-08-29 20:57:00 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered users/index.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 141ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /home/filbert/RubymineProjects/ZombieH/TweetnStore/app/assets/images
+  /home/filbert/RubymineProjects/ZombieH/TweetnStore/app/assets/javascripts
+  /home/filbert/RubymineProjects/ZombieH/TweetnStore/app/assets/stylesheets
+  /home/filbert/RubymineProjects/ZombieH/TweetnStore/vendor/assets/stylesheets
+  /home/filbert/.rvm/gems/ruby-2.4.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/filbert/.rvm/gems/ruby-2.4.0/gems/actioncable-5.1.3/lib/assets/compiled
+  /home/filbert/.rvm/gems/ruby-2.4.0/gems/actionview-5.1.3/lib/assets/compiled
+  /home/filbert/.rvm/gems/ruby-2.4.0/gems/turbolinks-source-5.0.3/lib/assets/javascripts):
+    2: <html>
+    3: <head>
+    4:   <title>UserTweets</title>
+    5:   <%= stylesheet_link_tag    "application" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  
+app/assets/javascripts/application.js:7
+app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__4255307693636413011_37095340'
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from env_config at /home/filbert/.rvm/gems/ruby-2.4.0/gems/railties-5.1.3/lib/rails/application.rb:247)
+Started GET "/" for ::1 at 2017-08-29 21:02:11 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered users/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 1131ms (Views: 933.4ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/application.self-f8894798ead0b588ad373052fcad2893a72a4800d77454a074bce8417f4e4992.css?body=1" for ::1 at 2017-08-29 21:02:12 +0300
+Started GET "/assets/scaffolds.self-96f08ffb78b4905c31316371a518f4560e97c91a9b4b1c95452caa53e3570d35.css?body=1" for ::1 at 2017-08-29 21:02:12 +0300
+Started GET "/assets/users.self-3e485a7d0fc184aac0459625f512dbf8a1f1a84ad25e9aa77aed5864464d71a5.js?body=1" for ::1 at 2017-08-29 21:02:12 +0300
+Started GET "/assets/users.self-f8b8c732e3110c24610bf9d5240bf16e3b2b849627f384ead26f217600be655a.css?body=1" for ::1 at 2017-08-29 21:02:12 +0300
+Started GET "/assets/tools.self-9bb8327adf51f0c66e9876c85c48783b3667f984565c56002ed9b1a137926e47.js?body=1" for ::1 at 2017-08-29 21:02:12 +0300
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2017-08-29 21:02:12 +0300
+Started GET "/assets/application.self-705575bc483598bd0d9c3be0db390d8ca6e05bda2687beaa2e080cbc592b3f0c.js?body=1" for ::1 at 2017-08-29 21:02:12 +0300
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2017-08-29 21:02:12 +0300
+Started GET "/assets/tools.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2017-08-29 21:02:12 +0300
+Started GET "/users/new" for ::1 at 2017-08-29 21:02:13 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (16.6ms)
+  Rendered users/new.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 42ms (Views: 35.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users" for ::1 at 2017-08-29 21:02:17 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9CQH2VlREiJlLA238UfnZ5vpHzmRa841MNsxQFaK33mwfYdSJWpDVE3tXIIN2Pl4rH0nsEIsT+P6oundHzWWsw==", "user"=>{"name"=>"1323121"}, "commit"=>"Create User"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `users` (`created_at`, `updated_at`) VALUES ('2017-08-29 18:02:17', '2017-08-29 18:02:17')[0m
+  [1m[35m (11.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 24ms (ActiveRecord: 12.0ms)
+
+
+Started GET "/users/1" for ::1 at 2017-08-29 21:02:17 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `titleize' for nil:NilClass):
+    1: <h1><%= @user.name.titleize %></h1>
+    2: 
+    3: <%= render @user.tools %>
+    4: 
+  
+app/views/users/show.html.erb:1:in `_app_views_users_show_html_erb__3733740544209162902_69828422476140'
+Started GET "/users/1" for ::1 at 2017-08-29 21:03:06 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `titlesize' for nil:NilClass):
+    1: <h1><%= @user.name.titlesize %></h1>
+    2: 
+    3: <%= render @user.tools %>
+    4: 
+  
+app/views/users/show.html.erb:1:in `_app_views_users_show_html_erb__3733740544209162902_69828250518620'
+Started GET "/" for ::1 at 2017-08-29 21:03:14 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered users/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 23ms (Views: 21.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for ::1 at 2017-08-29 21:03:16 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.6ms)
+  Rendered users/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2017-08-29 21:03:18 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Fa3evLcIcSQDvQif33MjTF7FeQXaMSbShm/zuGPxwitR9F43yzMgUit8Waoj7D1TaVFBjAl2pwRMFislKk6L4Q==", "user"=>{"name"=>"2321321"}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `users` (`created_at`, `updated_at`) VALUES ('2017-08-29 18:03:18', '2017-08-29 18:03:18')[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 12ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/users/2" for ::1 at 2017-08-29 21:03:18 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `titlesize' for nil:NilClass):
+    1: <h1><%= @user.name.titlesize %></h1>
+    2: 
+    3: <%= render @user.tools %>
+    4: 
+  
+app/views/users/show.html.erb:1:in `_app_views_users_show_html_erb__3733740544209162902_69828424981160'
+Started GET "/users/2" for ::1 at 2017-08-29 21:04:57 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <h1><%= @users.name.titlesize %></h1>
+    2: 
+    3: <%= render @users.tools %>
+    4: 
+  
+app/views/users/show.html.erb:1:in `_app_views_users_show_html_erb__3733740544209162902_69828319213000'
+Started POST "/users" for ::1 at 2017-08-29 21:05:02 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Fa3evLcIcSQDvQif33MjTF7FeQXaMSbShm/zuGPxwitR9F43yzMgUit8Waoj7D1TaVFBjAl2pwRMFislKk6L4Q==", "user"=>{"name"=>"2321321"}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `users` (`created_at`, `updated_at`) VALUES ('2017-08-29 18:05:02', '2017-08-29 18:05:02')[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 7ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/users/3" for ::1 at 2017-08-29 21:05:02 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <h1><%= @users.name.titlesize %></h1>
+    2: 
+    3: <%= render @users.tools %>
+    4: 
+  
+app/views/users/show.html.erb:1:in `_app_views_users_show_html_erb__3733740544209162902_69828423416900'
+Started GET "/" for ::1 at 2017-08-29 21:07:56 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered users/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 24ms (Views: 20.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/new" for ::1 at 2017-08-29 21:07:58 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (1.6ms)
+  Rendered users/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2017-08-29 21:08:01 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DvJqw8pksMezzGmsCrVQtySgz1bbRfosZ6fKc8y+qEBKq+pItl/hsZsNOJn2Kk6oEzT33wgCe/qt3hLuhQHhig==", "user"=>{"name"=>"22"}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `users` (`created_at`, `updated_at`) VALUES ('2017-08-29 18:08:01', '2017-08-29 18:08:01')[0m
+  [1m[35m (11.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 16ms (ActiveRecord: 11.6ms)
+
+
+Started GET "/users/4" for ::1 at 2017-08-29 21:08:01 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <h1><%= @users.name.titlesize %></h1>
+    2: 
+    3: <%= render @user.tools %>
+    4: 
+  
+app/views/users/show.html.erb:1:in `_app_views_users_show_html_erb__3733740544209162902_69828432383080'
+Started GET "/" for ::1 at 2017-08-29 21:08:12 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered users/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 27ms (Views: 25.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/4" for ::1 at 2017-08-29 21:08:13 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `titlesize' for nil:NilClass):
+    1: <h1><%= @user.name.titlesize %></h1>
+    2: 
+    3: <%= render @user.tools %>
+    4: 
+  
+app/views/users/show.html.erb:1:in `_app_views_users_show_html_erb__3733740544209162902_69828251727740'
+Started GET "/users/4" for ::1 at 2017-08-29 21:08:59 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mTool Load (0.5ms)[0m  [1m[34mSELECT `tools`.* FROM `tools` INNER JOIN `tools_users` ON `tools`.`id` = `tools_users`.`tool_id` WHERE `tools_users`.`user_id` = 4[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered users/show.html.erb within layouts/application (71.9ms)
+Completed 500 Internal Server Error in 89ms (ActiveRecord: 3.9ms)
+
+
+  
+ActionView::Template::Error (The scope body needs to be callable.):
+    2: 
+    3: <%= render @user.tools %>
+    4: 
+    5: <p><%= pluralize(@user.tweets.size, "Tweet") %></p>
+    6: 
+    7: <p><%= link_to "Create a new Tweet for #{@user.name}", new_User_tweet_path(@user) %></p>
+    8: <p><%= link_to "Back to users", users_path %></p>
+  
+app/models/tweet.rb:13:in `<class:Tweet>'
+app/models/tweet.rb:1:in `<top (required)>'
+app/views/users/show.html.erb:5:in `_app_views_users_show_html_erb__3733740544209162902_69828427695700'
+Started GET "/" for ::1 at 2017-08-29 21:09:47 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered users/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 27ms (Views: 25.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for ::1 at 2017-08-29 21:09:49 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (1.4ms)
+  Rendered users/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 26ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2017-08-29 21:09:52 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vz1sXL0F3z4e/4BQZaHm2NIKBlFAenYbBcnHdWiUllj7ZOzXwT6OSDY+0WWZPvjH5Z4+2JM9983PsB/oISvfkg==", "user"=>{"name"=>"22"}, "commit"=>"Create User"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `users` (`created_at`, `updated_at`) VALUES ('2017-08-29 18:09:52', '2017-08-29 18:09:52')[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/5
+Completed 302 Found in 9ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/users/5" for ::1 at 2017-08-29 21:09:52 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mTool Load (0.9ms)[0m  [1m[34mSELECT `tools`.* FROM `tools` INNER JOIN `tools_users` ON `tools`.`id` = `tools_users`.`tool_id` WHERE `tools_users`.`user_id` = 5[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered users/show.html.erb within layouts/application (10.7ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (The scope body needs to be callable.):
+    2: 
+    3: <%= render @user.tools %>
+    4: 
+    5: <p><%= pluralize(@user.tweets.size, "Tweet") %></p>
+    6: 
+    7: <p><%= link_to "Create a new Tweet for #{@user.name}", new_User_tweet_path(@user) %></p>
+    8: <p><%= link_to "Back to users", users_path %></p>
+  
+app/models/tweet.rb:13:in `<class:Tweet>'
+app/models/tweet.rb:1:in `<top (required)>'
+app/views/users/show.html.erb:5:in `_app_views_users_show_html_erb__3733740544209162902_69828253183940'
+Started GET "/users/5" for ::1 at 2017-08-29 21:12:16 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mTool Load (0.3ms)[0m  [1m[34mSELECT `tools`.* FROM `tools` INNER JOIN `tools_users` ON `tools`.`id` = `tools_users`.`tool_id` WHERE `tools_users`.`user_id` = 5[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered users/show.html.erb within layouts/application (10.8ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (The scope body needs to be callable.):
+    2: 
+    3: <%= render @user.tools %>
+    4: 
+    5: <!--<p><%= pluralize(@user.tweets.size, "Tweet") %></p>-->
+    6: 
+    7: <p><%= link_to "Create a new Tweet for #{@user.name}", new_User_tweet_path(@user) %></p>
+    8: <p><%= link_to "Back to users", users_path %></p>
+  
+app/models/tweet.rb:13:in `<class:Tweet>'
+app/models/tweet.rb:1:in `<top (required)>'
+app/views/users/show.html.erb:5:in `_app_views_users_show_html_erb__3733740544209162902_69828252833940'
+Started GET "/users/5" for ::1 at 2017-08-29 21:12:17 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mTool Load (1.8ms)[0m  [1m[34mSELECT `tools`.* FROM `tools` INNER JOIN `tools_users` ON `tools`.`id` = `tools_users`.`tool_id` WHERE `tools_users`.`user_id` = 5[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered users/show.html.erb within layouts/application (17.2ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 2.4ms)
+
+
+  
+ActionView::Template::Error (The scope body needs to be callable.):
+    2: 
+    3: <%= render @user.tools %>
+    4: 
+    5: <!--<p><%= pluralize(@user.tweets.size, "Tweet") %></p>-->
+    6: 
+    7: <p><%= link_to "Create a new Tweet for #{@user.name}", new_User_tweet_path(@user) %></p>
+    8: <p><%= link_to "Back to users", users_path %></p>
+  
+app/models/tweet.rb:13:in `<class:Tweet>'
+app/models/tweet.rb:1:in `<top (required)>'
+app/views/users/show.html.erb:5:in `_app_views_users_show_html_erb__3733740544209162902_69828252331240'
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from env_config at /home/filbert/.rvm/gems/ruby-2.4.0/gems/railties-5.1.3/lib/rails/application.rb:247)
+Started GET "/users/5" for ::1 at 2017-08-29 21:12:38 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mTool Load (0.5ms)[0m  [1m[34mSELECT `tools`.* FROM `tools` INNER JOIN `tools_users` ON `tools`.`id` = `tools_users`.`tool_id` WHERE `tools_users`.`user_id` = 5[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered users/show.html.erb within layouts/application (62.9ms)
+Completed 500 Internal Server Error in 306ms (ActiveRecord: 3.8ms)
+
+
+  
+ActionView::Template::Error (The scope body needs to be callable.):
+    2: 
+    3: <%= render @user.tools %>
+    4: 
+    5: <!--<p><%= pluralize(@user.tweets.size, "Tweet") %></p>-->
+    6: 
+    7: <p><%= link_to "Create a new Tweet for #{@user.name}", new_User_tweet_path(@user) %></p>
+    8: <p><%= link_to "Back to users", users_path %></p>
+  
+app/models/tweet.rb:13:in `<class:Tweet>'
+app/models/tweet.rb:1:in `<top (required)>'
+app/views/users/show.html.erb:5:in `_app_views_users_show_html_erb___2880977699600348976_33345380'
+Started GET "/users/5" for ::1 at 2017-08-29 21:13:31 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mTool Load (0.8ms)[0m  [1m[34mSELECT `tools`.* FROM `tools` INNER JOIN `tools_users` ON `tools`.`id` = `tools_users`.`tool_id` WHERE `tools_users`.`user_id` = 5[0m
+  Rendered collection of templates [0 times] (0.1ms)
+  Rendered users/show.html.erb within layouts/application (18.0ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (The scope body needs to be callable.):
+    2: 
+    3: <%= render @user.tools %>
+    4: 
+    5: <p><%= pluralize(@user.tweets.size, "Tweet") %></p>
+    6: 
+    7: <p><%= link_to "Create a new Tweet for #{@user.name}", new_User_tweet_path(@user) %></p>
+    8: <p><%= link_to "Back to users", users_path %></p>
+  
+app/models/tweet.rb:13:in `<class:Tweet>'
+app/models/tweet.rb:1:in `<top (required)>'
+app/views/users/show.html.erb:5:in `_app_views_users_show_html_erb___2880977699600348976_35239880'
+Started GET "/users/5" for ::1 at 2017-08-29 21:15:22 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mTool Load (0.6ms)[0m  [1m[34mSELECT `tools`.* FROM `tools` INNER JOIN `tools_users` ON `tools`.`id` = `tools_users`.`tool_id` WHERE `tools_users`.`user_id` = 5[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered users/show.html.erb within layouts/application (12.1ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (The scope body needs to be callable.):
+    2: 
+    3: <%= render @user.tools %>
+    4: 
+    5: <p><%= pluralize(@user.tweets.size, "Tweet") %></p>
+    6: 
+    7: <p><%= link_to "Create a new Tweet for #{@user.name}", new_User_tweet_path(@user) %></p>
+    8: <p><%= link_to "Back to users", users_path %></p>
+  
+app/models/tweet.rb:13:in `<class:Tweet>'
+app/models/tweet.rb:1:in `<top (required)>'
+app/views/users/show.html.erb:5:in `_app_views_users_show_html_erb___2880977699600348976_32651960'
+Started GET "/users/5" for ::1 at 2017-08-29 21:15:23 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mTool Load (1.0ms)[0m  [1m[34mSELECT `tools`.* FROM `tools` INNER JOIN `tools_users` ON `tools`.`id` = `tools_users`.`tool_id` WHERE `tools_users`.`user_id` = 5[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered users/show.html.erb within layouts/application (14.5ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (The scope body needs to be callable.):
+    2: 
+    3: <%= render @user.tools %>
+    4: 
+    5: <p><%= pluralize(@user.tweets.size, "Tweet") %></p>
+    6: 
+    7: <p><%= link_to "Create a new Tweet for #{@user.name}", new_User_tweet_path(@user) %></p>
+    8: <p><%= link_to "Back to users", users_path %></p>
+  
+app/models/tweet.rb:13:in `<class:Tweet>'
+app/models/tweet.rb:1:in `<top (required)>'
+app/views/users/show.html.erb:5:in `_app_views_users_show_html_erb___2880977699600348976_23791520'
+Started GET "/u" for ::1 at 2017-08-29 21:15:26 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/u"):
+  
+actionpack (5.1.3) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.3) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.3) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.3) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.3) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for ::1 at 2017-08-29 21:15:32 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered users/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 208ms (Views: 206.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for ::1 at 2017-08-29 21:15:34 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (12.2ms)
+  Rendered users/new.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 25ms (Views: 24.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2017-08-29 21:15:35 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Oex5tWg/uN8gbE1ON+AM+6v9R5KNZVvv8eUs8p6Hw5t9tfk+FATpqQitHHvLfxLknGl/G14i2jk7nPRv1ziKUQ==", "user"=>{"name"=>"ghhg"}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `users` (`created_at`, `updated_at`) VALUES ('2017-08-29 18:15:35', '2017-08-29 18:15:35')[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 9ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/users/6" for ::1 at 2017-08-29 21:15:35 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mTool Load (0.5ms)[0m  [1m[34mSELECT `tools`.* FROM `tools` INNER JOIN `tools_users` ON `tools`.`id` = `tools_users`.`tool_id` WHERE `tools_users`.`user_id` = 6[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered users/show.html.erb within layouts/application (8.9ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (The scope body needs to be callable.):
+    2: 
+    3: <%= render @user.tools %>
+    4: 
+    5: <p><%= pluralize(@user.tweets.size, "Tweet") %></p>
+    6: 
+    7: <p><%= link_to "Create a new Tweet for #{@user.name}", new_User_tweet_path(@user) %></p>
+    8: <p><%= link_to "Back to users", users_path %></p>
+  
+app/models/tweet.rb:13:in `<class:Tweet>'
+app/models/tweet.rb:1:in `<top (required)>'
+app/views/users/show.html.erb:5:in `_app_views_users_show_html_erb___2880977699600348976_69829440628220'
+Started POST "/__web_console/repl_sessions/5a24d2458ff1c70afb8f0b077f961126/trace" for ::1 at 2017-08-29 21:16:13 +0300
+Started POST "/__web_console/repl_sessions/5a24d2458ff1c70afb8f0b077f961126/trace" for ::1 at 2017-08-29 21:16:16 +0300
+Started GET "/users/6" for ::1 at 2017-08-29 21:17:33 +0300
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mTool Load (0.6ms)[0m  [1m[34mSELECT `tools`.* FROM `tools` INNER JOIN `tools_users` ON `tools`.`id` = `tools_users`.`tool_id` WHERE `tools_users`.`user_id` = 6[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `tweets` WHERE `tweets`.`user_id` = 6[0m
+  Rendered users/show.html.erb within layouts/application (176.6ms)
+Completed 500 Internal Server Error in 206ms (ActiveRecord: 3.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `new_User_tweet_path' for #<#<Class:0x007f04dd5277c0>:0x007f04dd51f408>):
+    4: 
+    5: <p><%= pluralize(@user.tweets.size, "Tweet") %></p>
+    6: 
+    7: <p><%= link_to "Create a new Tweet for #{@user.name}", new_User_tweet_path(@user) %></p>
+    8: <p><%= link_to "Back to users", users_path %></p>
+  
+app/views/users/show.html.erb:7:in `_app_views_users_show_html_erb___2880977699600348976_69829434902080'
+Started GET "/users/6" for ::1 at 2017-08-29 21:18:22 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 6 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mTool Load (0.6ms)[0m  [1m[34mSELECT `tools`.* FROM `tools` INNER JOIN `tools_users` ON `tools`.`id` = `tools_users`.`tool_id` WHERE `tools_users`.`user_id` = 6[0m
+  Rendered collection of templates [0 times] (0.4ms)
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `tweets` WHERE `tweets`.`user_id` = 6[0m
+  Rendered users/show.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 43ms (Views: 33.8ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/users" for ::1 at 2017-08-29 21:18:28 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered users/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 43ms (Views: 40.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for ::1 at 2017-08-29 21:18:31 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.6ms)
+  Rendered users/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 28ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2017-08-29 21:18:34 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6j5jG0b4zm1AUNBbrm/fU42sDC/e5pX82HvNZ7KdRL+uZ+OQOsOfG2iRgW5S8MFMujg0pg2hFCoSAhX6+yINdQ==", "user"=>{"name"=>"adsadsa"}, "commit"=>"Create User"}
+  [1m[35m (1.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `users` (`created_at`, `updated_at`) VALUES ('2017-08-29 18:18:35', '2017-08-29 18:18:35')[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 16ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/users/7" for ::1 at 2017-08-29 21:18:35 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 7 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mTool Load (0.6ms)[0m  [1m[34mSELECT `tools`.* FROM `tools` INNER JOIN `tools_users` ON `tools`.`id` = `tools_users`.`tool_id` WHERE `tools_users`.`user_id` = 7[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `tweets` WHERE `tweets`.`user_id` = 7[0m
+  Rendered users/show.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 48ms (Views: 37.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users/7/tweets/new" for ::1 at 2017-08-29 21:18:41 +0300
+Processing by TweetsController#new as HTML
+  Parameters: {"user_id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = NULL LIMIT 1[0m
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=):
+  
+app/controllers/tweets_controller.rb:28:in `new'
+Started GET "/users/7/tweets/new" for ::1 at 2017-08-29 21:30:01 +0300
+Processing by TweetsController#new as HTML
+  Parameters: {"user_id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = NULL LIMIT 1[0m
+Completed 404 Not Found in 4ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=):
+  
+app/controllers/tweets_controller.rb:28:in `new'
+Started GET "/" for ::1 at 2017-08-29 21:31:24 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered users/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 46ms (Views: 26.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for ::1 at 2017-08-29 21:31:25 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (1.4ms)
+  Rendered users/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 22ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2017-08-29 21:31:28 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JDXHMRa77p1bjQOYHiQsg0coUa2T3jX1uJSuC16Ao2RgbEe6aoC/63NMUq3iuzKccLxpJECZtCNy7XaWFz/qrg==", "user"=>{"name"=>"gdfgfd"}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO `users` (`created_at`, `updated_at`) VALUES ('2017-08-29 18:31:28', '2017-08-29 18:31:28')[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/8
+Completed 302 Found in 10ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/users/8" for ::1 at 2017-08-29 21:31:28 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mTool Load (0.4ms)[0m  [1m[34mSELECT `tools`.* FROM `tools` INNER JOIN `tools_users` ON `tools`.`id` = `tools_users`.`tool_id` WHERE `tools_users`.`user_id` = 8[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM `tweets` WHERE `tweets`.`user_id` = 8[0m
+  Rendered users/show.html.erb within layouts/application (41.7ms)
+Completed 200 OK in 62ms (Views: 57.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/8/tweets/new" for ::1 at 2017-08-29 21:31:30 +0300
+Processing by TweetsController#new as HTML
+  Parameters: {"user_id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (2.0ms)
+  Rendered tweets/new.html.erb within layouts/application (148.7ms)
+Completed 500 Internal Server Error in 179ms (ActiveRecord: 2.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `User_tweets_path' for #<#<Class:0x007f04ddedbac8>:0x007f04dded9a70>):
+    2: 
+    3: <%= render 'form' %>
+    4: 
+    5: <%= link_to 'Back', User_tweets_path(@user) %>
+  
+app/views/tweets/new.html.erb:5:in `_app_views_tweets_new_html_erb__1905405595170357541_69829439971820'
+Started GET "/users/8/tweets/new" for ::1 at 2017-08-29 21:32:26 +0300
+Processing by TweetsController#new as HTML
+  Parameters: {"user_id"=>"8"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (18.3ms)
+  Rendered tweets/new.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 66ms (Views: 58.7ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/users/8/tweets" for ::1 at 2017-08-29 21:32:30 +0300
+Processing by TweetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VcphjtstyD4rpJr72PwUBNatGTGIdoZz1En6jOXjCA4Rk+EFpxaZSANly84kYwob4TkhuFsxB6UeMCIRrFxBxA==", "tweet"=>{"message"=>"fdsfsdf", "location_attributes"=>{"name"=>"sdfsdfsdf"}}, "commit"=>"Create Tweet", "user_id"=>"8"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/tweets_controller.rb:48:in `create'
+Started POST "/users/8/tweets" for ::1 at 2017-08-29 21:35:09 +0300
+Processing by TweetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VcphjtstyD4rpJr72PwUBNatGTGIdoZz1En6jOXjCA4Rk+EFpxaZSANly84kYwob4TkhuFsxB6UeMCIRrFxBxA==", "tweet"=>{"message"=>"fdsfsdf", "location_attributes"=>{"name"=>"sdfsdfsdf"}}, "commit"=>"Create Tweet", "user_id"=>"8"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 8 LIMIT 1[0m
+Completed 500 Internal Server Error in 100ms (ActiveRecord: 1.5ms)
+
+
+  
+NameError (undefined local variable or method `null' for #<TweetsController:0x007f04de320458>):
+  
+app/controllers/tweets_controller.rb:48:in `create'
+Started GET "/" for ::1 at 2017-08-29 21:36:38 +0300
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users`[0m
+  Rendered users/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 30ms (Views: 19.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/new" for ::1 at 2017-08-29 21:36:39 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.2ms)
+  Rendered users/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 28ms (Views: 26.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2017-08-29 21:36:41 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9BkPopU9hzZARSs/MmZ3b4g5nLO54Tij4RU7FH5X1qqwQI8p6QbWQGiEegrO+Wlwv62kOmqmuXUrbOOJN+ifYA==", "user"=>{"name"=>"fdfdfd"}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `users` (`created_at`, `updated_at`) VALUES ('2017-08-29 18:36:41', '2017-08-29 18:36:41')[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/9
+Completed 302 Found in 8ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/users/9" for ::1 at 2017-08-29 21:36:41 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mTool Load (0.4ms)[0m  [1m[34mSELECT `tools`.* FROM `tools` INNER JOIN `tools_users` ON `tools`.`id` = `tools_users`.`tool_id` WHERE `tools_users`.`user_id` = 9[0m
+  Rendered collection of templates [0 times] (0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `tweets` WHERE `tweets`.`user_id` = 9[0m
+  Rendered users/show.html.erb within layouts/application (46.8ms)
+Completed 200 OK in 63ms (Views: 56.5ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/users/9/tweets/new" for ::1 at 2017-08-29 21:36:43 +0300
+Processing by TweetsController#new as HTML
+  Parameters: {"user_id"=>"9"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+  Rendering tweets/new.html.erb within layouts/application
+  Rendered tweets/_form.html.erb (2.1ms)
+  Rendered tweets/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 49ms (Views: 22.7ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/users/9/tweets" for ::1 at 2017-08-29 21:36:46 +0300
+Processing by TweetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fkJIF9P+JeNyZ2LsPIFMoeOj44HmWFnUY+7c+drtCSE6G8icr8V0lVqmM9nAHlK+1DfbCDUf2AKplwRkk1JA6w==", "tweet"=>{"message"=>"fdfdfd", "location_attributes"=>{"name"=>"fdfd"}}, "commit"=>"Create Tweet", "user_id"=>"9"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/tweets_controller.rb:48:in `create'
+Started POST "/users/9/tweets" for ::1 at 2017-08-29 21:38:03 +0300
+Processing by TweetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fkJIF9P+JeNyZ2LsPIFMoeOj44HmWFnUY+7c+drtCSE6G8icr8V0lVqmM9nAHlK+1DfbCDUf2AKplwRkk1JA6w==", "tweet"=>{"message"=>"fdfdfd", "location_attributes"=>{"name"=>"fdfd"}}, "commit"=>"Create Tweet", "user_id"=>"9"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 0.5ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 0..1)):
+  
+app/controllers/tweets_controller.rb:48:in `create'
+Started POST "/users/9/tweets" for ::1 at 2017-08-29 21:38:44 +0300
+Processing by TweetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fkJIF9P+JeNyZ2LsPIFMoeOj44HmWFnUY+7c+drtCSE6G8icr8V0lVqmM9nAHlK+1DfbCDUf2AKplwRkk1JA6w==", "tweet"=>{"message"=>"fdfdfd", "location_attributes"=>{"name"=>"fdfd"}}, "commit"=>"Create Tweet", "user_id"=>"9"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 9 LIMIT 1[0m
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.5ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 0..1)):
+  
+app/controllers/tweets_controller.rb:48:in `create'

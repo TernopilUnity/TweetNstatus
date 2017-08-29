@@ -1,0 +1,11 @@
+I"ð(function() {
+  $(document).ready(function() {
+    return $('a#displayToolForm').click(function(event) {
+      $('div#newTool').show();
+      $('a#displayToolForm').hide();
+      return event.preventDefault();
+    });
+  });
+
+}).call(this);
+:ET

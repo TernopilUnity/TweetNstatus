@@ -1,0 +1,6 @@
+<%= form_for([@user, @tool]) do |f| %>
+  <%= f.text_field :name %>
+  <%= f.number_field :counts %>
+  <%= f.select :condition, ["New", "Old", "The oldest"] %>
+  <%= f.date_select :purchased_on %>
+<% end %>

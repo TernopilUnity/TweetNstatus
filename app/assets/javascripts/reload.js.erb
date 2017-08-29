@@ -1,0 +1,4 @@
+$('#counts').text('<%= @tool.counts %>');
+<% if @tool.counts >= 30 %>
+  $('#reload_form').fadeOut();
+<% end %>

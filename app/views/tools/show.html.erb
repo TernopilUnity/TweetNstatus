@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+<ul>
+  <li>
+    <em>Name:</em>
+    <%= @tool.name %>
+  </li>
+  <li>
+    <em>Condition:</em>
+    <span id="condition"><%= @tool.condition %></span>
+    <%= link_to "Toggle", toggle_condition_Tool_path(@tool), remote: true %>
+  </li>
+  <li>
+    <em>counts:</em>
+    <span id="counts"><%= @tool.counts %></span>
+  </li>
+</ul>
+

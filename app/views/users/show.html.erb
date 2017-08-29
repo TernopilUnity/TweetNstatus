@@ -1,0 +1,8 @@
+
+
+<%= render @user.tools %>
+
+<p><%= pluralize(@user.tweets.size, "Tweet") %></p>
+
+<p><%= link_to "Create a new Tweet for #{@user.name}", new_user_tweet_path(@user) %></p>
+<p><%= link_to "Back to users", users_path %></p>
